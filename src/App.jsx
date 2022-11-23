@@ -1,29 +1,23 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import './App.css';
+import Home from './pages/Home'
+import SearchResults from './pages/SearchResults'
+import Detail from './pages/Detail'
+
+import { Link, Route } from 'wouter'
+import reactLogo from './assets/react.svg'
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1 class="text-3xl text-blue-500">Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
+    <div className="bg-gray-800 grid h-full">
+      <section className='text-white grid place-content-center p-4'>
+        <div className='flex justify-center'>
+          <Link to='/'>
+            <img className='grid place-content-center animate-pulse' src={reactLogo} alt="react-logo" />
+          </Link>
+        </div>
+        <Route component={Home} path='/' />
+        <Route component={SearchResults} path='/search/:keyword' />
+        <Route component={Detail} path='/gif/:id' />
+      </section>
     </div>
   );
 }
