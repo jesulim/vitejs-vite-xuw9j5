@@ -11,7 +11,7 @@ function App() {
       <section className='text-white grid place-content-center p-4'>
         <div className='flex justify-center'>
           <Link to='/'>
-            <img className='grid place-content-center animate-pulse' src={reactLogo} alt="react-logo" />
+            <img className='animate-bounce' src={reactLogo} alt="react-logo" />
           </Link>
         </div>
         <Route component={Home} path='/' />

@@ -11,6 +11,8 @@ export default function Home() {
 
   const {loading, gifs} = useGifs({ keyword: 'Reactjs' })
 
+  console.log(path)
+
   const handleSubmit = evt => {
     evt.preventDefault()
     pushLocation(`/search/${keyword}`)
