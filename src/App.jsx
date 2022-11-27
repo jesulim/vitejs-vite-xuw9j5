@@ -5,13 +5,13 @@ import Detail from './pages/Detail'
 import { Link, Route } from 'wouter'
 import reactLogo from './assets/react.svg'
 
-function App() {
+function App () {
   return (
-    <div className="bg-gray-800 grid h-full">
+    <div className='bg-gray-800 grid h-full pt-6'>
       <section className='text-white grid place-content-center p-4'>
         <div className='flex justify-center'>
           <Link to='/'>
-            <img className='animate-bounce' src={reactLogo} alt="react-logo" />
+            <img className='animate-bounce' src={reactLogo} alt='react-logo' />
           </Link>
         </div>
         <Route component={Home} path='/' />
@@ -19,7 +19,7 @@ function App() {
         <Route component={Detail} path='/gif/:id' />
       </section>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

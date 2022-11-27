@@ -9,7 +9,7 @@ export default function Home () {
   const [keyword, setKeyword] = useState('')
   const [path, pushLocation] = useLocation()
 
-  const { loading, gifs } = useGifs({ keyword: 'Reactjs' })// eslint-disable-line
+  const { loading, gifs } = useGifs()// eslint-disable-line
 
   console.log(path)
 
